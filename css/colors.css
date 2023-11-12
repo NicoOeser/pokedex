@@ -1,0 +1,43 @@
+.black {
+    background-color: rgb(97, 92, 92);
+}
+
+.blue {
+    background-color: rgb(118, 190, 254);
+}
+
+.brown {
+    background-color: rgb(204, 166, 110);
+}
+
+.gray {
+    background-color: rgb(199, 199, 199);
+}
+
+.green {
+    background-color: rgb(73, 208, 176);
+}
+
+.pink {
+    background-color: rgb(240, 175, 226);
+}
+
+.purple {
+    background-color: rgb(223, 159, 253);
+}
+
+.red {
+    background-color: rgb(252, 108, 109);
+}
+
+.white {
+    background-color: rgb(248, 204, 204);
+}
+
+.yellow {
+    background-color: rgba(216, 214, 76, 0.712);
+}
+
+.grey {
+    background-color: rgba(0, 0, 0, 0.05);
+}

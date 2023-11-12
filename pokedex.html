@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="./favicon/site.webmanifest">
+
+    <!-- Bootstrap Files -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/colors.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/fonts.css">
+    
+    <!-- JS -->
+    <script src="./js/data.js"></script>
+    <script src="./js/templates.js"></script>
+    <script src="./js/cards.js"></script>
+    <script defer src="./js/script.js"></script>
+
+    <title>Pokedex</title>
+</head>
+
+<body onload="init(); return false">
+
+    <nav class="navbar navbar-light bg-light d-flex flex-column align-items-center">
+        <a class="navbar-brand d-flex align-items-center">
+            <img src="./img/pokeball.png" alt="">
+            <span class="pokedex-title">Pokedex</span>
+            <img src="./img/pokeball.png" alt="">
+        </a>
+    
+        <form class="d-flex mt-2" id="searchForm" onsubmit="return false;">
+            <input oninput="searchPokemon(); return false;" class="form-control" id="searchInput" type="search" placeholder="Search" aria-label="Search">
+        </form>
+    </nav>
+
+    <div id="loadingOverlay" class="loading-overlay">
+        <div class="loading-container">
+          <div class="loading-bar" id="loadingBar"></div> 
+          <div class="loading-text" id="loadingProgress"></div> 
+        </div>
+    </div>
+
+    <div id="pokedex"></div>
+    
+    <div class="container d-flex justify-content-center mt-4">
+        <button id="btn-loadMore" class="btn btn-secondary d-none" onclick="loadMore()">Weitere</button>
+    </div>
+
+    <div class="dialog-bg d-none" id="dialog">
+        <div class="poke-card big-card" id="card"></div>
+    </div>
+
+</body>
+
+</html>
